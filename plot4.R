@@ -11,7 +11,7 @@ with(UCI_P,{
               type = "l", col = "red")
   lines( as.POSIXct(paste(Date, Time)) ,  as.numeric(as.character(Sub_metering_3)), 
               type = "l", col = "blue")  
-  legend("topright", pch = 1, col = c("black", "red", "blue"), legend = c("Sub_metering_1","Sub_metering_2","Sub_metering_3")) 
+  legend("topright", pch = 1, col = c("black", "red", "blue"),bty="n", legend = c("Sub_metering_1","Sub_metering_2","Sub_metering_3")) 
   plot( as.POSIXct(paste(Date, Time)) ,  as.numeric(as.character(Global_reactive_power)), 
         type = "l", ylab =  "Global_reactive_power", xlab = "datetime" )  
 })
