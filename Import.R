@@ -1,9 +1,9 @@
 #1. Loading the data
 DATAzip <- "exdata-data-household_power_consumption.zip"
-file_ls <- as.character( unzip(DATAzip, list = TRUE)$Name )
+file_ls <- as.character( unzip(paste0("../",DATAzip), list = TRUE)$Name )
 
 require(data.table)
-UCI <- data.table(read.table(unz(DATAzip,file_ls), sep = ";", head = TRUE))
+UCI <- data.table(read.table(unz(paste0("../",DATAzip),file_ls), sep = ";", head = TRUE))
 # Transfer Date format
 UCI[,Date:=as.Date(as.character(Date), "%d/%m/%Y")]
 # Locate the data for analysis
